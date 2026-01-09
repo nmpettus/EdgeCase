@@ -1,0 +1,5 @@
+{
+  "name": "Edge-Case Challenge",
+  "description": "A fun interactive lab for kids to learn about AI generalization and drift by trying to 'break' an AI's recognition with messy filters.",
+  "requestFramePermissions": []
+}
