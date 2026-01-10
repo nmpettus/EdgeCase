@@ -1,9 +1,8 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIAnalysis } from "../types";
 
-// Vite uses VITE_ prefix for environment variables
-const ai = new GoogleGenAI({ apiKey: process.env.VITE_API_KEY || "" });
+// Always use process.env.API_KEY for the Gemini API
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
 export async function analyzeImage(base64Image: string, expectedLabel: string): Promise<AIAnalysis> {
   try {
@@ -62,7 +61,8 @@ export async function analyzeImage(base64Image: string, expectedLabel: string): 
       },
     });
 
-    return JSON.parse(response.text);
+    const text = response.text || "{}";
+    return JSON.parse(text);
   } catch (error) {
     console.error("Gemini Analysis Error:", error);
     return {

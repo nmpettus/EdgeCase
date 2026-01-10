@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface TransformationState {
   blur: number;
@@ -29,10 +30,22 @@ export interface PresetImage {
   label: string;
 }
 
+export interface EdgeCaseExample extends PresetImage {
+  description: string;
+}
+
 export type Difficulty = 'Manual' | 'Easy' | 'Medium' | 'Hard';
 
 export interface DifficultyPreset {
   label: Difficulty;
   config: TransformationState;
   description: string;
+}
+
+export interface FieldScenario {
+  id: string;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  config: TransformationState;
 }
