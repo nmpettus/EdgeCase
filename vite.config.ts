@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [
     react()
   ],
-  base: '/EdgeLab/',
+  // Using relative base path makes deployment to shared hosting like Hostinger much easier
+  base: './',
   build: {
     outDir: 'dist',
-    sourcemap: false
+    sourcemap: false,
+    // Ensure clean builds
+    emptyOutDir: true
   }
 });
