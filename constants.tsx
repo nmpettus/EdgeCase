@@ -9,6 +9,13 @@ export const PRESET_IMAGES: PresetImage[] = [
   { id: 'plant', url: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=500&fit=crop', label: 'Potted Plant' },
 ];
 
+export const EDGE_CASE_EXAMPLES = [
+  { id: 'shadows', label: 'Harsh Shadows', url: 'https://images.unsplash.com/photo-1516222338250-863216ce019b?w=300&h=300&fit=crop', description: 'Dark patches hide shape' },
+  { id: 'blur', label: 'Motion Blur', url: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=300&h=300&fit=crop', description: 'Fast movement smudges edges' },
+  { id: 'angle', label: 'Bird\'s Eye', url: 'https://images.unsplash.com/photo-1471180625745-944903837c22?w=300&h=300&fit=crop', description: 'Top-down perspective change' },
+  { id: 'noise', label: 'Digital Grain', url: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=300&h=300&fit=crop', description: 'Low light sensor static' },
+];
+
 export const INITIAL_TRANSFORMATIONS: TransformationState = {
   blur: 0,
   brightness: 100,

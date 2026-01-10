@@ -2,7 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIAnalysis } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
+// Vite uses VITE_ prefix for environment variables
+const ai = new GoogleGenAI({ apiKey: process.env.VITE_API_KEY || "" });
 
 export async function analyzeImage(base64Image: string, expectedLabel: string): Promise<AIAnalysis> {
   try {
