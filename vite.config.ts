@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     envCompatible({ prefix: 'VITE', mountedPath: 'process.env' })
   ],
-  base: '/edge/',
+  base: '/EdgeLab/',
   build: {
     outDir: 'dist',
     sourcemap: false
