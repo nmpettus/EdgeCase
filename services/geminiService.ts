@@ -1,7 +1,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIAnalysis } from "../types";
 
-// FIX: The API key must be obtained from process.env.API_KEY as per the guidelines. This also fixes the TypeScript error.
+// Declare process for TypeScript to satisfy the build requirement while adhering to SDK usage rules.
+declare var process: {
+  env: {
+    API_KEY: string;
+  };
+};
+
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export async function analyzeImage(base64Image: string, expectedLabel: string): Promise<AIAnalysis> {
